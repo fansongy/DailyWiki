@@ -1,0 +1,2 @@
+# DailyWiki
+just another wiki
