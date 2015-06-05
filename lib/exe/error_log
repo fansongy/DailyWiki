@@ -1,0 +1,2 @@
+[03-Jun-2015 09:03:59 UTC] PHP Warning:  scandir(./data/pages/): failed to open dir: No such file or directory in /home/songyan1/public_html/wiki/lib/plugins/catlist/syntax.php on line 205
+[03-Jun-2015 09:03:59 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/songyan1/public_html/wiki/lib/plugins/catlist/syntax.php on line 205
