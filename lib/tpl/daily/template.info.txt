@@ -1,0 +1,7 @@
+base     dokuwiki
+author   Anika Henke
+email    anika@selfthinker.org
+date     2014-06-04
+name     Daily Template
+desc     Make a better looking from default theme
+url      http://www.dokuwiki.org/template:dokuwiki
