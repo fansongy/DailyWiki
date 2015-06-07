@@ -6,19 +6,38 @@
 
 /* existing wikipage */
 .dokuwiki a.wikilink1 {
+    color:#080;
+    padding:4px;
+    border-radius:4px;
+    transition:background ease .4s;
+    -webkit-transition:background ease .4s;
+    -moz-transition:background ease .4s;
+    -o-transition:background ease .4s;
+    -ms-transition:background ease .4s;
 }
+.dokuwiki a.wikilink1:hover,
+.dokuwiki a.wikilink2:active,
+.dokuwiki a.wikilink3:focus {
+    color:#fff;
+    background:#080;
+}
+
 /* not existing wikipage */
 .dokuwiki a.wikilink2 {
-    text-decoration: none;
-}
-.dokuwiki a.wikilink2:link,
-.dokuwiki a.wikilink2:visited {
-    border-bottom: 1px dashed;
+    color:#df846c;
+    padding:4px;
+    border-radius:4px;
+    transition:background ease .4s;
+    -webkit-transition:background ease .4s;
+    -moz-transition:background ease .4s;
+    -o-transition:background ease .4s;
+    -ms-transition:background ease .4s;
 }
 .dokuwiki a.wikilink2:hover,
 .dokuwiki a.wikilink2:active,
 .dokuwiki a.wikilink2:focus {
-    border-bottom-width: 0;
+    color:#fff;
+    background:#df846c;
 }
 
 /* any link to current page */

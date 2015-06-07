@@ -236,6 +236,7 @@ pre {
  * Address odd `em`-unit font size rendering in all browsers.
  */
 
+/* remove by daily
 code,
 kbd,
 pre,
@@ -243,6 +244,7 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
+*/
 
 /* Forms
    ========================================================================== */
@@ -430,6 +432,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* remove by daily
+td,
+th {
+  padding: 0;
+}
+*/
 
 /*csslint important:false*/
 

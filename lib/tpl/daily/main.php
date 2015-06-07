@@ -23,6 +23,17 @@ $showSidebar = $hasSidebar && ($ACT=='show');
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
     <?php tpl_includeFile('meta.html') ?>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/tomorrow.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        jQuery(document).ready(function() {
+          jQuery('pre.code').each(function(i, block) {
+            hljs.highlightBlock(block);
+          });
+        });
+    </script>
 </head>
 
 <body>
