@@ -23,8 +23,6 @@ $showSidebar = $hasSidebar && ($ACT=='show');
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
     <?php tpl_includeFile('meta.html') ?>
-    <!-- add for my theme -->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
 
 <body>

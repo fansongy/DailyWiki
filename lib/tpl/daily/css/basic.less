@@ -159,10 +159,7 @@ ol ol ol ol ol { list-style-type: lower-roman; }
 /*____________ tables ____________*/
 
 table {
-    border-collapse: collapse;
-    empty-cells: show;
-    border-spacing: 0;
-    border: 1px solid @ini_border;
+    .pure-table;
 }
 
 caption {
@@ -175,15 +172,19 @@ caption {
 
 th,
 td {
-    padding: .3em .5em;
+    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
     margin: 0;
-    vertical-align: top;
-    border: 1px solid @ini_border;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 0.5em 1em; /* cell padding */
+    border-bottom: 1px solid #cbcbcb;
 }
 th {
-    font-weight: bold;
-    background-color: @ini_background_alt;
+    background-color: #e0e0e0;
+    color: #000;
     text-align: left;
+    vertical-align: bottom;
 }
 [dir=rtl] th {
     text-align: right;
