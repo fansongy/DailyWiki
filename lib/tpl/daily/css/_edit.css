@@ -137,7 +137,7 @@ div.picker button.toolbutton {
 
 /* style for section highlighting */
 .dokuwiki div.section_highlight {
-    background: #A4FFBF;
+    background: #F5F5D5;
     color: inherit;
     box-shadow: 0 0 .5em @ini_text_alt;
     border-radius: 1px;

@@ -125,13 +125,13 @@ This is Daily!!
     <script>
     (function() {
         var header = new Headroom(document.querySelector("#autoHeader"), {
-            "tolerance": 35,
-            "offset" : 205,
+            "tolerance": 25,
+            "offset": 205,
             "classes": {
                 "initial": "animated",
-                "pinned": "flipInX",
-                "unpinned": "flipOutX"
-              }
+                "pinned": "swingInX",
+                "unpinned": "swingOutX"
+            }
         });
         header.init();
 
