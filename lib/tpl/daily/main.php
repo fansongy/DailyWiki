@@ -43,7 +43,6 @@ $showSidebar = $hasSidebar && ($ACT=='show');
         echo ($showSidebar) ? 'showSidebar' : ''; ?> <?php echo ($hasSidebar) ? 'hasSidebar' : ''; ?>">
 
         <?php include('tpl_header.php') ?>
-This is Daily!!
         <div class="wrapper group">
 
             <?php if($showSidebar): ?>
