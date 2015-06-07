@@ -132,6 +132,7 @@ div.picker button.toolbutton {
 }
 .dokuwiki .secedit input.button {
     font-size: 75%;
+    width:80%;
 }
 
 /* style for section highlighting */
