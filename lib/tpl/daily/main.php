@@ -24,6 +24,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
     <?php tpl_includeFile('meta.html') ?>
 
+    <!-- high light of code-->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/tomorrow.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
     <script>
@@ -117,5 +118,37 @@ This is Daily!!
     <div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
     <div id="screen__mode" class="no"></div><?php /* helper to detect CSS media query in script.js */ ?>
     <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+    <!-- head auto fit -->
+
+    <script src="./lib/tpl/daily/headroom.min.js"></script>
+    <script>
+    (function() {
+        var header = new Headroom(document.querySelector("#autoHeader"), {
+            "tolerance": 35,
+            "offset" : 205,
+            "classes": {
+                "initial": "animated",
+                "pinned": "flipInX",
+                "unpinned": "flipOutX"
+              }
+        });
+        header.init();
+
+        // var bttHeadroom = new Headroom(document.getElementById("btt"), {
+        //     tolerance : 0,
+        //     offset : 500,
+        //     classes : {
+        //         initial : "slide",
+        //         pinned : "slide--reset",
+        //         unpinned : "slide--down"
+        //     }
+        // });
+        // bttHeadroom.init();
+    }());
+    </script>
+
 </body>
+
+ 
 </html>
