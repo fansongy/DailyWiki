@@ -120,33 +120,6 @@ $showSidebar = $hasSidebar && ($ACT=='show');
 
     <!-- head auto fit -->
 
-    <script src="./lib/tpl/daily/headroom.min.js"></script>
-    <script>
-    (function() {
-        var header = new Headroom(document.querySelector("#autoHeader"), {
-            "tolerance": 25,
-            "offset": 205,
-            "classes": {
-                "initial": "animated",
-                "pinned": "swingInX",
-                "unpinned": "swingOutX"
-            }
-        });
-        header.init();
-
-        // var bttHeadroom = new Headroom(document.getElementById("btt"), {
-        //     tolerance : 0,
-        //     offset : 500,
-        //     classes : {
-        //         initial : "slide",
-        //         pinned : "slide--reset",
-        //         unpinned : "slide--down"
-        //     }
-        // });
-        // bttHeadroom.init();
-    }());
-    </script>
-
 </body>
 
  

@@ -75,7 +75,7 @@
     }
 
     .headings.bk {
-        //background:#292f36;
+        background:#292f36;
         width: 100%;
     }
 }
@@ -100,7 +100,7 @@
 .mode_revisions a.action.revs,
 .mode_backlink a.action.backlink,
 .mode_subscribe a.action.subscribe {
-    font-weight: bold;
+    .pur
 }
 
 #dokuwiki__header .tools {
@@ -152,40 +152,29 @@
 /*____________ user tools ____________*/
 
 #dokuwiki__usertools {
-    top: .5em;
-    right: .5em;
-    text-align: right;
-    width: 100%;
+
+    .pure-menu; 
+    .pure-menu-horizontal;
+    float:right;
+    width:auto;
+    background:#333;
+
+    li.much {
+        .pure-menu-item;
+        .pure-menu-has-children;
+        .pure-menu-allow-hover;
+    }
 
     ul {
-        margin: 0 auto;
-        padding: 0;
-        max-width: @ini_site_width;
+        .pure-menu-item;
     }
 
-    a.action.admin {
-        background-position: left 0;
-    }
-
-    a.iw_user,
-    a.action.profile {
-        background-position: left -32px;
-    }
-
-    a.action.register {
-        background-position: left -64px;
-    }
-
-    a.action.login {
-        background-position: left -96px;
-    }
-
-    a.action.logout {
-        background-position: left -128px;
+    li {
+        .pure-menu-item;
     }
 }
 
-[dir=rtl] #dokuwiki__usertools {
+[dir=rtl] ##dokuwiki__header usertools {
     text-align: left;
     left: 40px;
     right: auto;
@@ -215,13 +204,32 @@
 
 #dokuwiki__sitetools {
     text-align: right;
-    margin-top: 2em;
     form.search {
         font-size: 0.875em;
     }
+    a.action.recent {
+        background-position: left -96px;
+    }
+
 }
 
+/*____________ links ____________*/
 
+#dokuwiki__links {
+    top: .5em;
+    right: .5em;
+    text-align: right;
+    width: 100%;
+
+    ul {
+        margin: 0 auto;
+        padding: 0;
+    }
+    li {
+        float:right;
+        padding-right:0.2em;
+    }
+}
 
 [dir=rtl] #dokuwiki__sitetools {
     text-align: left;
