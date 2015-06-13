@@ -22,7 +22,7 @@ if (!defined('DOKU_INC')) die();
                 // display logo and wiki title in a link to the home page
                 tpl_link(
                     wl(),
-                    '<img src="'.$logo.'" height="32" width="32" alt="" /> <span>'.$conf['title'].'</span>',
+                    '<img src="'.$logo.'" height="30" width="30" alt="" /> <span>'.$conf['title'].'</span>',
                     'accesskey="h" title="[H]"'
                 );
             ?></h1>
@@ -34,7 +34,8 @@ if (!defined('DOKU_INC')) die();
         <div class="tools group">
             <?php if ($conf['useacl']): ?>
                <!--  <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"> -->
-                    <!-- <a href="#" id="menuLink1" class="pure-menu-link">Manage</a> -->
+               <li class="menu">
+                    <a href="#" class="holder">Manage</a>
                     <ul>
                         <?php
                             // if (!empty($_SERVER['REMOTE_USER'])) {
@@ -51,7 +52,7 @@ if (!defined('DOKU_INC')) die();
                         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
                         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tumblr Blog</a></li> -->
                     </ul>
-                <!-- </li> -->
+                </li>
             <?php endif ?>
         </div>
 
@@ -75,9 +76,9 @@ if (!defined('DOKU_INC')) die();
     <!-- BREADCRUMBS -->
     <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
         <div class="breadcrumbs">
-            <?php if($conf['youarehere']): ?>
-                <div class="youarehere"><?php tpl_youarehere() ?>
-                 <?php
+            <?php if($conf['breadcrumbs']): ?>
+                <div class="trace"><?php tpl_breadcrumbs() ?>
+                <?php
                     if (!empty($_SERVER['REMOTE_USER'])) {
                         echo '<span class="info">';
                         tpl_userinfo(); /* 'Logged in as ...' */
@@ -86,11 +87,11 @@ if (!defined('DOKU_INC')) die();
                 ?>
                 </div>
             <?php endif ?>
-            <?php if($conf['breadcrumbs']): ?>
-                <div class="trace"><?php tpl_breadcrumbs() ?></div>
+            <?php if($conf['youarehere']): ?>
+                <div class="youarehere"><?php tpl_youarehere() ?></div>
             <?php endif ?>
-
         </div>
+
     <?php endif ?>
     <?php html_msgarea() ?>
     <hr class="a11y" />

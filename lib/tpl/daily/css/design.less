@@ -38,10 +38,84 @@
         height: 60px; 
         float: right; 
         position: relative; 
+        
 
-        ul { float: right; position: relative; z-index: 15; list-style: none; margin: 15px 15px 15px 0; }
-        li { float: left; margin: 0 0 0 20px; font-size: 1em; font-family: 'avalon', sans-serif; }
-        .filler { width: 800%; height: 60px; background: #00cccc; position: absolute; z-index: 14; left: 0px; top: 0; }
+
+        .holder {
+            .pure-menu-link;
+        }
+        
+        .menu {
+            list-style: none; 
+            width:100%;
+            height:100%;
+
+            &:hover ul {
+                display:block;
+            }
+            ul {
+                .pure-menu-children；
+            }
+
+            li {
+                background:#222c37;
+                .pure-menu-item;
+                margin: 0px 0 0 -19px;
+                width: 190px;
+                a {
+                    padding-left: 30px;
+                }
+                a { 
+                    height: 40px; 
+                    line-height: 40px; 
+                    display: block; 
+                    float: left; 
+                    margin: 0 15px; 
+                    text-decoration: none; 
+                    cursor: pointer; 
+                    color: #D1D1D1; 
+                    -webkit-transition: color .15s; 
+                    -moz-transition: color .15s; 
+                    -ms-transition: color .15s; 
+                    -o-transition: color .15s; 
+                    transition: color .15s; 
+                }
+                a:hover { color: #00cccc; }
+                a.selected {
+                    color: #00cccc; position: relative; font-family: 'avalonbold', sans-serif; line-height: 44px; 
+                }
+                a.selected:after { 
+                    content: ''; display: block; width: 100%; height: 1px; position: absolute; bottom: 11px; left: 0; background: #00cccc; 
+                }
+            }
+
+            a {
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                float: left;
+                margin: 0px 15px;
+                text-decoration: none;
+                cursor: pointer;
+                color: #D1D1D1;
+                transition: color 0.15s ease 0s;
+            }
+        }
+
+        ul { 
+            display:none;
+            position: relative; 
+            z-index: 15; 
+            list-style: none; 
+            margin: 15px 15px 15px 0; 
+        }
+
+        li { 
+            float: left; 
+            margin: 0 0 0 20px; 
+            font-size: 1em; 
+            font-family: 'avalon', sans-serif; 
+        }
         
     }
 
@@ -76,6 +150,7 @@
             padding: 20px 50px 20px 20px; 
             border: 0; 
             margin: 0; 
+            outline: none;
             -webkit-border-radius: 0; 
             -moz-border-radius: 0; 
             border-radius: 0; 
@@ -159,19 +234,24 @@
 
         img {
             float: left;
-            margin-right: .5em;
+            margin: 0px 10px 0px 20px;
         }
 
         span {
             display: block;
-            padding-top: 10px;
-            color:#999;
+            width:100%;
+
         }
 
-        a {
-            text-decoration: none;
-            color: @ini_text;
-            background-color: inherit;
+        a { 
+            color: #D1D1D1; 
+        }
+        a:hover { color: #00cccc; }
+        a.selected {
+            color: #00cccc; position: relative; font-family: 'avalonbold', sans-serif; line-height: 44px; 
+        }
+        a.selected:after { 
+            content: ''; display: block; width: 100%; height: 1px; position: absolute; bottom: 11px; left: 0; background: #00cccc; 
         }
     }
 
@@ -300,7 +380,6 @@
 .dokuwiki div.breadcrumbs {
 
     width: 100%; 
-    height: 40px; 
     background: #e6e6e6; 
     border-bottom: #222c37 0px solid;
 
@@ -325,7 +404,7 @@
         font-size: 0.75em;
     }
 
-    .youarehere {
+    .trace {
         span.info {
             float: right;
         }
