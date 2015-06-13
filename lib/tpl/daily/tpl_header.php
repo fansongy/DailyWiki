@@ -6,18 +6,14 @@
 // must be run from within DokuWiki
 if (!defined('DOKU_INC')) die();
 ?>
-<header id="autoHeader" class="header header--fixed hide-from-print" role="banner">
 <!-- ********** HEADER ********** -->
-<div id="dokuwiki__header"><div class="pad group">
-
-    <?php tpl_includeFile('header.html') ?>
-    <div class="headings bk">
-
-        <div class="headings sign">
+<div id="dokuwiki__header">
+    <div class="pad group">
+        <!-- logo -->
+        <div class="headings group">
             <ul class="a11y skip">
                 <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content']; ?></a></li>
             </ul>
-
             <h1><?php
                 // get logo either out of the template images folder or data/media folder
                 $logoSize = array();
@@ -34,40 +30,39 @@ if (!defined('DOKU_INC')) die();
                 <p class="claim"><?php echo $conf['tagline']; ?></p>
             <?php endif ?>
         </div>
-
-        <div class="pure-menu pure-menu-horizontal" style="float:right;width:auto;">
+        <!-- tools group -->
+        <div class="tools group">
             <?php if ($conf['useacl']): ?>
-                <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                    <a href="#" id="menuLink1" class="pure-menu-link">Manage</a>
-                    <ul class="pure-menu-children">
+               <!--  <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"> -->
+                    <!-- <a href="#" id="menuLink1" class="pure-menu-link">Manage</a> -->
+                    <ul>
                         <?php
-                            if (!empty($_SERVER['REMOTE_USER'])) {
-                                echo '<li class="pure-menu-item">';
-                                tpl_userinfo(); /* 'Logged in as ...' */
-                                echo '</li>';
-                            }
-                            tpl_action('admin', 1, 'li class="pure-menu-item" ');
-                            tpl_action('profile', 1, 'li class="pure-menu-item"');
-                            tpl_action('register', 1, 'li class="pure-menu-item"');
-                            tpl_action('login', 1, 'li class="pure-menu-item"');
+                            // if (!empty($_SERVER['REMOTE_USER'])) {
+                            //     echo '<li>';
+                            //     tpl_userinfo(); /* 'Logged in as ...' */
+                            //     echo '</li>';
+                            // }
+                            tpl_action('admin', 1, 'li');
+                            tpl_action('profile', 1, 'li');
+                            tpl_action('register', 1, 'li');
+                            tpl_action('login', 1, 'li');
                         ?>
                       <!--   <li class="pure-menu-item"><a href="#" class="pure-menu-link">Email</a></li>
                         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Twitter</a></li>
                         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tumblr Blog</a></li> -->
                     </ul>
-                </li>
+                <!-- </li> -->
             <?php endif ?>
         </div>
 
-        <!-- SITE TOOLS -->
-        <div id="dokuwiki__sitetools">
+        <!-- search tools -->
             <h3 class="a11y"><?php echo $lang['site_tools']; ?></h3>
             <?php tpl_searchform(); ?>
             <div class="mobileTools">
                 <?php tpl_actiondropdown($lang['tools']); ?>
             </div>
-        </div>
-        <div id="dokuwiki__links">
+        <!-- links -->
+        <div class="links group">
             <ul>
                 <?php
                     tpl_action('recent', 1, 'li');
@@ -75,24 +70,29 @@ if (!defined('DOKU_INC')) die();
                     tpl_action('index', 1, 'li');
                 ?>
             </ul>
-        </div> 
-
+        </div>   
     </div>
     <!-- BREADCRUMBS -->
     <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
         <div class="breadcrumbs">
             <?php if($conf['youarehere']): ?>
-                <div class="youarehere"><?php tpl_youarehere() ?></div>
+                <div class="youarehere"><?php tpl_youarehere() ?>
+                 <?php
+                    if (!empty($_SERVER['REMOTE_USER'])) {
+                        echo '<span class="info">';
+                        tpl_userinfo(); /* 'Logged in as ...' */
+                        echo '</span>';
+                    }
+                ?>
+                </div>
             <?php endif ?>
             <?php if($conf['breadcrumbs']): ?>
                 <div class="trace"><?php tpl_breadcrumbs() ?></div>
             <?php endif ?>
+
         </div>
     <?php endif ?>
-
     <?php html_msgarea() ?>
-
     <hr class="a11y" />
-</div></div>
-</header>
+</div>
 <!-- /header -->
