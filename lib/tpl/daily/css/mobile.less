@@ -15,123 +15,137 @@
 ********************************************************************/
 @media only screen and (max-width: @ini_tablet_width) {
 
-#screen__mode {
-    z-index: 1; /* for detecting media queries in JavaScript (see script.js) */
-}
-
-/* structure */
-#dokuwiki__aside {
-    width: 100%;
-    float: none;
-}
-
-#dokuwiki__aside > .pad,
-[dir=rtl] #dokuwiki__aside > .pad {
-    margin: 0 0 .5em;
-    /* style like .page */
-    background: @ini_background;
-    color: inherit;
-    border: 1px solid #eee;
-    box-shadow: 0 0 .5em @ini_text_alt;
-    border-radius: 2px;
-    padding: 1em;
-    margin-bottom: .5em;
-}
-
-#dokuwiki__aside h3.toggle {
-    font-size: 1em;
-
-    &.closed {
-        margin-bottom: 0;
-        padding-bottom: 0;
+    #screen__mode {
+        z-index: 1; /* for detecting media queries in JavaScript (see script.js) */
     }
-    &.open {
+
+    /* structure */
+    #dokuwiki__aside {
+        width: 100%;
+        float: none;
+    }
+
+    #dokuwiki__aside > .pad,
+    [dir=rtl] #dokuwiki__aside > .pad {
+        margin: 0 0 .5em;
+        /* style like .page */
+        background: @ini_background;
+        color: inherit;
+        border: 1px solid #eee;
+        box-shadow: 0 0 .5em @ini_text_alt;
+        border-radius: 2px;
+        padding: 1em;
+        margin-bottom: .5em;
+    }
+
+    #dokuwiki__aside h3.toggle {
+        font-size: 1em;
+
+        &.closed {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        &.open {
+            border-bottom: 1px solid @ini_border;
+        }
+    }
+
+
+    #dokuwiki__header .headings {
+        display:none;
+    }
+
+    #dokuwiki__header .links li a {
+        margin: 0px 8px;
+    }
+    #dokuwiki__header form.search input.edit {
+        width: 300px;
+    }
+    #dokuwiki__aside {
+        left: 0;
+    }
+    .showSidebar #dokuwiki__content {
+        float: none;
+        margin-left: 0;
+        width: 100%;
+
+        > .pad {
+            margin-left: 0;
+        }
+    }
+
+    [dir=rtl] .showSidebar #dokuwiki__content,
+    [dir=rtl] .showSidebar #dokuwiki__content > .pad {
+        margin-right: 0;
+    }
+
+    /* preview */
+    .dokuwiki.hasSidebar div.preview {
+        border-right: none;
+    }
+
+    [dir=rtl] .dokuwiki.hasSidebar div.preview {
+        border-left: none;
+    }
+
+    /* toc */
+    #dw__toc {
+        float: none;
+        margin: 0 0 1em 0;
+        width: auto;
+        border-left-width: 0;
         border-bottom: 1px solid @ini_border;
     }
-}
-
-.showSidebar #dokuwiki__content {
-    float: none;
-    margin-left: 0;
-    width: 100%;
-
-    > .pad {
-        margin-left: 0;
+    [dir=rtl] #dw__toc {
+        float: none;
+        margin: 0 0 1em 0;
+        border-right-width: 0;
     }
-}
 
-[dir=rtl] .showSidebar #dokuwiki__content,
-[dir=rtl] .showSidebar #dokuwiki__content > .pad {
-    margin-right: 0;
-}
+    .dokuwiki h3.toggle {
+        padding: 0 .5em .5em 0;
+    }
+    #dw__toc > div,
+    #dokuwiki__aside div.content {
+        padding: .2em 0 .5em;
+    }
 
-/* preview */
-.dokuwiki.hasSidebar div.preview {
-    border-right: none;
-}
+    /* page */
+    .dokuwiki div.page {
+        padding: 1em;
+    }
+    /* enable horizontal scrolling in media manager */
+    .mode_media div.page {
+        overflow: auto;
+    }
 
-[dir=rtl] .dokuwiki.hasSidebar div.preview {
-    border-left: none;
-}
-
-/* toc */
-#dw__toc {
-    float: none;
-    margin: 0 0 1em 0;
-    width: auto;
-    border-left-width: 0;
-    border-bottom: 1px solid @ini_border;
-}
-[dir=rtl] #dw__toc {
-    float: none;
-    margin: 0 0 1em 0;
-    border-right-width: 0;
-}
-
-.dokuwiki h3.toggle {
-    padding: 0 .5em .5em 0;
-}
-#dw__toc > div,
-#dokuwiki__aside div.content {
-    padding: .2em 0 .5em;
-}
-
-/* page */
-.dokuwiki div.page {
-    padding: 1em;
-}
-/* enable horizontal scrolling in media manager */
-.mode_media div.page {
-    overflow: auto;
-}
-
-/* push pagetools closer to content */
-#dokuwiki__pagetools {
-    top: 0;
-}
-.showSidebar #dokuwiki__pagetools {
-    top: 3.5em;
-}
+    /* push pagetools closer to content */
+    #dokuwiki__pagetools {
+        top: 0;
+    }
+    .showSidebar #dokuwiki__pagetools {
+        top: 3.5em;
+    }
 
 
-/* _edit */
-.dokuwiki div.section_highlight {
-    margin: 0 -1em;
-    padding: 0 .5em;
-    border-width: 0 .5em;
-}
-.dokuwiki div.preview {
-    margin: 0 -1em;
-    padding: 1em;
-}
+    /* _edit */
+    .dokuwiki div.section_highlight {
+        margin: 0 -1em;
+        padding: 0 .5em;
+        border-width: 0 .5em;
+    }
+    .dokuwiki div.preview {
+        margin: 0 -1em;
+        padding: 1em;
+    }
 
-/* _recent */
-.dokuwiki form.changes ul {
-    padding-left: 0;
-}
-[dir=rtl] .dokuwiki form.changes ul {
-    padding-right: 0;
-}
+    /* _recent */
+    .dokuwiki form.changes ul {
+        padding-left: 0;
+    }
+    [dir=rtl] .dokuwiki form.changes ul {
+        padding-right: 0;
+    }
 
 
 } /* /@media */
@@ -193,6 +207,7 @@
     }
 
     #dokuwiki__header .headings {
+        display:inline;
         width:50%;
         span {
             font-size: 0.5em;
@@ -277,6 +292,10 @@
 
 
     /*____________ content ____________*/
+    
+    #dokuwiki__aside {
+        left:0;
+    }
 
     #dokuwiki__aside > .pad,
     .dokuwiki div.page {
