@@ -67,7 +67,17 @@
 
 /*____________ lists ____________*/
 
-.dokuwiki .page,
+.dokuwiki .page {
+    ul, ol 
+    {
+        padding: 0px 0px 0px 2em;
+    }
+
+    ul {
+        list-style: disc;
+    }
+}
+
 .dokuwiki .aside {
     ul li {
         color: @ini_text_alt;
