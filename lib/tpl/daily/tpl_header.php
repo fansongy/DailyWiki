@@ -11,9 +11,6 @@ if (!defined('DOKU_INC')) die();
     <div class="pad group">
         <!-- logo -->
         <div class="headings group">
-            <ul class="a11y skip">
-                <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content']; ?></a></li>
-            </ul>
             <h1><?php
                 // get logo either out of the template images folder or data/media folder
                 $logoSize = array();
