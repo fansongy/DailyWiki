@@ -1,7 +1,7 @@
-base     dokuwiki
-author   Anika Henke
-email    anika@selfthinker.org
-date     2014-06-04
-name     Daily Template
+base     Daily
+author   SongYang Fan
+email    fansongy@gmail.com
+date     2015-06-21
+name     Daily
 desc     Make a better looking from default theme
-url      http://www.dokuwiki.org/template:dokuwiki
+url      http://github/fansongy/daily
